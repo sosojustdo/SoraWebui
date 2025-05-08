@@ -20,6 +20,17 @@ export const getIndexLanguageText = async () => {
   };
 }
 
+export const getAuthLanguageText = async () => {
+  const tAuth = await getTranslations('auth');
+  return {
+    loginText: tAuth('loginText'),
+    loginModalDesc: tAuth('loginModalDesc'),
+    loginModalButtonText: tAuth('loginModalButtonText'),
+    logoutModalDesc: tAuth('logoutModalDesc'),
+    confirmButtonText: tAuth('confirmButtonText'),
+    cancelButtonText: tAuth('cancelButtonText'),
+  }
+}
 
 export const getQuestionLanguageText = async () => {
   const tIndexQuestion = await getTranslations('indexQuestion');
